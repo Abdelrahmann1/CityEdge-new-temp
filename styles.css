@@ -1132,4 +1132,72 @@
       opacity: 1;
       transform: translateY(0);
     }
+    .brochure-section {
+      background-color: #00263d;
+      color: white;
+      padding: 90px 20px;
+      text-align: center;
+    }
+    
+    /* ===== تصميم الصندوق ===== */
+    .brochure-box {
+      max-width: 700px;
+      margin: auto;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      padding: 45px 30px;
+      border-radius: 20px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+      opacity: 0;
+      transform: translateY(50px);
+      transition: all 1s ease;
+    }
+    
+    .brochure-box.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    
+    /* ===== النصوص ===== */
+    .brochure-box h2 {
+      font-size: 28px;
+      margin-bottom: 15px;
+      font-weight: bold;
+      color: #FFD15C;
+    }
+    
+    .brochure-box p {
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+   
+    
+    .brochure-box ul {
+      list-style: none;
+      padding: 0;
+      text-align: right;
+      font-size: 17px;
+      line-height: 2;
+      direction: rtl;
+      margin: 0;
+    }
+    
+    /* ===== الزر ===== */
+    .btn-brochure {
+      display: inline-block;
+      background-color: #FFD15C;
+      color: white;
+      font-weight: bold;
+      font-size: 18px;
+      padding: 12px 35px;
+      margin-top: 25px;
+      border-radius: 30px;
+      transition: all 0.3s ease;
+      text-decoration: none;
+    }
+    
+    .btn-brochure:hover {
+      background-color: #ffda73;
+      transform: scale(1.05);
+    }
     

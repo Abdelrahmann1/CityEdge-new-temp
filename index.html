@@ -128,26 +128,25 @@
         </p>
     </section>
    
-    <section style="background-color:#00263d;color:white;padding:90px 20px;text-align:center;">
-        <div
-            style="max-width:700px;margin:auto;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.15);padding:45px 30px;border-radius:20px;box-shadow:0 8px 25px rgba(0,0,0,0.25);">
-
-            <h2 style="font-size:28px;margin-bottom:15px;font-weight:bold;color:#FFD15C;"> احصل على البروشور الآن</h2>
-            <p style="font-size:18px;margin-bottom:20px;">يحتوي البروشور على:</p>
-
-            <ul style="list-style:none;padding:0;text-align:right;font-size:17px;line-height:2;direction:rtl;margin:0;">
-                <li style="margin:8px 0;">✅ المخططات التفصيلية لجميع المشاريع</li>
-                <li style="margin:8px 0;">✅ الأسعار الحصرية وأنظمة السداد</li>
-                <li style="margin:8px 0;">✅ صور عالية الجودة للوحدات</li>
-                <li style="margin:8px 0;">✅ خريطة المواقع والمرافق</li>
-            </ul>
-
-            <a href="https://wa.me/201050564000?text=مرحبًا%20👋%0Aأرغب%20في%20الحصول%20على%20البروشور%20الكامل%20لمشروعات%20سيتي%20إيدج."
-                target="_blank" class="btn-brochure">
-                تحميل البروشور
-            </a>
-        </div>
-    </section>
+    <section class="brochure-section">
+      <div class="brochure-box">
+          <h2>احصل على البروشور الآن</h2>
+          <p>يحتوي البروشور على:</p>
+  
+          <ul>
+              <li>✅ المخططات التفصيلية لجميع المشاريع</li>
+              <li>✅ الأسعار الحصرية وأنظمة السداد</li>
+              <li>✅ صور عالية الجودة للوحدات</li>
+              <li>✅ خريطة المواقع والمرافق</li>
+          </ul>
+  
+          <a href="https://wa.me/201050564000?text=مرحبًا%20👋%0Aأرغب%20في%20الحصول%20على%20البروشور%20الكامل%20لمشروعات%20سيتي%20إيدج."
+              target="_blank" class="btn-brochure">
+              تحميل البروشور
+          </a>
+      </div>
+  </section>
+  
     
 
     <!-- Units Section -->
@@ -290,7 +289,6 @@
         <h2 style="text-align:center;color:#00263d;font-size:2rem;margin:40px 0 20px;">معرض الصور</h2>
     
         <div class="gallery-scroll">
-            <img src="assets/img/projects/alamen/1.jpg" alt="مشهد 1">
             <img src="assets/img/projects/alamen/2.jpg" alt="مشهد 2">
 
             <img src="assets/img/projects/alamen/3.jpg" alt="مشهد 2">
@@ -893,6 +891,26 @@
           });
         });
       </script>
+      <script>
+        // تشغيل الأنيميشن عند ظهور العنصر في الشاشة
+        document.addEventListener("DOMContentLoaded", () => {
+          const box = document.querySelector(".brochure-box");
+        
+          const observer = new IntersectionObserver(
+            (entries) => {
+              entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                  box.classList.add("visible");
+                }
+              });
+            },
+            { threshold: 0.2 } // يبدأ الأنيميشن عند ظهور 20% من العنصر
+          );
+        
+          observer.observe(box);
+        });
+        </script>
+      
       
       
 
